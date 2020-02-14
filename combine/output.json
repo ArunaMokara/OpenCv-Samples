@@ -1,0 +1,622 @@
+{
+    "Frame1.0": {
+        "Time": 0.04,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.49132996632996634,
+                0.12533670033670033,
+                0.38333333333333336
+            ],
+            "color": [
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "lightgray"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ i598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame2.0": {
+        "Time": 0.04,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.4952892561983471,
+                0.13140495867768595,
+                0.37330578512396695
+            ],
+            "color": [
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "lightgray"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ i598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame3.0": {
+        "Time": 0.08,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.3836363636363636,
+                0.1294214876033058,
+                0.4869421487603306
+            ],
+            "color": [
+                [
+                    null,
+                    "lightgray"
+                ],
+                [
+                    null,
+                    "lightgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "lightgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ i598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame4.0": {
+        "Time": 0.12,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.49161031805659905,
+                0.13122965189080893,
+                0.377160030052592
+            ],
+            "color": [
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "lightgray"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ i598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame5.0": {
+        "Time": 0.16,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.4899407296101511,
+                0.3794139744552968,
+                0.13064529593455212
+            ],
+            "color": [
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "lightgray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "lightgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ 1598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame6.0": {
+        "Time": 0.2,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.20247046186895812,
+                0.4377013963480129,
+                0.359828141783029
+            ],
+            "color": [
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "slategray"
+                ],
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "slategray"
+                ],
+                [
+                    null,
+                    "darkseagreen"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ i598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame7.0": {
+        "Time": 0.24,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.48952333249853913,
+                0.13039485766758493,
+                0.38008180983387596
+            ],
+            "color": [
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "darkgray"
+                ],
+                [
+                    null,
+                    "darkslategray"
+                ],
+                [
+                    null,
+                    "lightgray"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ 1598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame8.0": {
+        "Time": 0.28,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.3592910848549946,
+                0.43823845327604727,
+                0.20247046186895812
+            ],
+            "color": [
+                [
+                    null,
+                    "darkseagreen"
+                ],
+                [
+                    null,
+                    "darkseagreen"
+                ],
+                [
+                    null,
+                    "slategray"
+                ],
+                [
+                    null,
+                    "darkseagreen"
+                ],
+                [
+                    null,
+                    "slategray"
+                ],
+                [
+                    null,
+                    "lightslategray"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ 1598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame9.0": {
+        "Time": 0.32,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.20247046186895812,
+                0.43823845327604727,
+                0.3592910848549946
+            ],
+            "color": [
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "slategray"
+                ],
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "slategray"
+                ],
+                [
+                    null,
+                    "darkseagreen"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ 1598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    },
+    "Frame10.0": {
+        "Time": 0.36,
+        "persons dict": {
+            "personsfound": 1,
+            "person 1": 0.62
+        },
+        "Demographics": {
+            "Faces found": 0,
+            "Demographics": {},
+            "Males:": 0,
+            "Females:": 0
+        },
+        "Dominant color": {
+            "percentage": [
+                0.20247046186895812,
+                0.43823845327604727,
+                0.3592910848549946
+            ],
+            "color": [
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "slategray"
+                ],
+                [
+                    null,
+                    "lightslategray"
+                ],
+                [
+                    null,
+                    "slategray"
+                ],
+                [
+                    null,
+                    "darkseagreen"
+                ]
+            ]
+        },
+        "Animals": {
+            "animals found": 2,
+            "animals_list": {
+                "cow": 2
+            }
+        },
+        "Number Plate": {
+            "license_plate": {
+                "car1": {
+                    "number_plate": "HJZ 1598"
+                }
+            }
+        },
+        "Fire": {
+            "fire": 0
+        }
+    }
+}
