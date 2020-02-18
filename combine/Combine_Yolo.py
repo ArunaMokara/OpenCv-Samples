@@ -9,14 +9,14 @@ from yolo_edit import*
 from yolo_video import*
 from Fire_detection_video import*
 from obj_video import*
-cap = cv2.VideoCapture("18.mp4")
+cap = cv2.VideoCapture("combine.mp4")
 fps = cap.get(cv2.CAP_PROP_FPS)
 frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 print('frames per second : ' + str(fps))
 print('Total number of frames : ' + str(frame_count))
-output={}
-
+path="/home/administrator/PycharmProjects/Internship/Intern/YOLOv3/combine/combine.mp4"
 def _main():
+    i = 0
     while True:
         ret, frame = cap.read()
         if not ret:
@@ -26,21 +26,26 @@ def _main():
         time = round(time / 1000, 2)
         frame_no = cap.get(cv2.CAP_PROP_POS_FRAMES)
         finaldict = {}
-        #finaldict["frame_no"] = frame_no
+        finaldict["video_url"]=path
+        for j in range(len(path)):
+            if(path[j]=="."):
+                finaldict["video_type"]=path[j:]
+        finaldict["Frame_no"] = frame_no
         finaldict["Time"]= time
-        finaldict["persons dict"] = persons(frame)
-        finaldict["Demographics"]= demographics(frame)
-        finaldict["Dominant color"]=color_detection(frame)
-        finaldict["Animals"]=animal(frame)
-        finaldict["Number Plate"]= number_plate(frame)
-        finaldict["Fire"]= detect_fire(frame)
+        finaldict["Detections"]={}
+        finaldict["Detections"]["Person_detections"]=persons(frame)
+        finaldict["Detections"]["Demographic_detections"]=demographics(frame)
+        finaldict["Detections"]["Color_detections"]=color_detection(frame)
+        finaldict["Detections"]["Animal_detections"]=animal(frame)
+        finaldict["Detections"]["Numberplate_detections"] = number_plate(frame)
+        finaldict["Detections"]["Fire_detections"] = detect_fire(frame)
         print(finaldict)
-        output[str("Frame"+str(frame_no))] = finaldict
-        print("output",output)
-        if(frame_no==10):
+        i = i + 1
+        with open('jsons/'+str(i)+'.json', 'w', encoding='utf-8') as f:
+            json.dump(finaldict, f, ensure_ascii=False, indent=4)
+        if(frame_no==5):
             break
-    with open('output.json', 'w', encoding='utf-8') as f:
-        json.dump(output, f, ensure_ascii=False, indent=4)
+
 
 if __name__ == '__main__':
    _main()

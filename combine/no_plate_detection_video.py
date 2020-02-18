@@ -17,6 +17,7 @@ def number_plate(frame):
 
     plate_rect = plate_cascade.detectMultiScale(frame, scaleFactor=1.3, minNeighbors=7)
     dict = {}
+    details=[]
     if len(plate_rect)==0:
         dict["license_plates detected"] = 0
 
@@ -37,11 +38,17 @@ def number_plate(frame):
         no_of_license_plates = len(plate_rect)
         # dict[frame_no]["detected at frame number"] = no_of_license_plates
         # dict[frame_no]["detected number plate number"] = text
-        dict["license_plate"] = {}
+        boolen=False
         for i in range(len(plate_rect)):
+            Dict={}
+            Dict["car_id"]=i+1
+            Dict["number_plate"] = text
+            details.append(Dict)
+            boolen=True
+        dict["Is_numberplate_detected"]=boolen
+        dict["detected_numberplates"] = no_of_license_plates
+        dict["license_plate details"] = details
 
-            dict["license_plate"][str("car"+str(i+1))] = {}
-            dict["license_plate"][str("car"+str(i+1))]["number_plate"] = text
         info = [
             ('number of faces detected', '{}'.format(len(plate_rect)))
         ]

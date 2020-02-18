@@ -37,12 +37,15 @@ def animal(frame):
     classIDs = []
     confs =[]
     total = {}
-    final = {}
     Dict = {}
     animalfound=0
     count = 0
+    details=[]
+    animals=[]
+    boolen=False
     # loop over each of the layer outputs
     for output in layerOutputs:
+        animal = ""
         # loop over each of the detections
         for detection in output:
             # extract the class ID and confidence (i.e., probability)
@@ -50,6 +53,7 @@ def animal(frame):
             scores = detection[5:]
             classID = np.argmax(scores)
             confidence1 = scores[classID]
+
             if confidence1 > confidence and 24 > classID >= 15:
                 animalfound+=1
                 id=classID
@@ -77,8 +81,17 @@ def animal(frame):
                 boxes.append([x, y, int(width), int(height)])
                 confidences.append(float(confidence1))
                 classIDs.append(classID)
-            Dict["animals found"]=animalfound
-            Dict["animals_list"]=total
+                animals.append(animal)
+                boolen=True
+    Dict["Is_animal_detected"]=boolen
+    Dict["detected_animals"]=animalfound
+    Dict["animals_list"]=total
+    for i in range(animalfound):
+        final = {}
+        final["animal_type"] = animals[i]
+        final["confidence"] = round(confidences[i], 2)
+        details.append(final)
+    Dict["animals_details"]=details
     idxs = cv2.dnn.NMSBoxes(boxes, confidences, confidence, threshold)
     # ensure at least one detection exists
     if len(idxs) > 0:

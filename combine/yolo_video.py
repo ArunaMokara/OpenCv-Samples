@@ -39,6 +39,8 @@ def persons(frame):
 	classIDs = []
 	person = []
 	no_of_persons = 0
+	details=[]
+	boolen=False
 	# loop over each of the layer outputs
 	for output in layerOutputs:
 		# loop over each of the detections
@@ -66,9 +68,18 @@ def persons(frame):
 				boxes.append([x, y, int(width), int(height)])
 				confidences.append(round(float(confidence),2))
 				classIDs.append(classID)
-			dict["personsfound"] = no_of_persons
+				boolen=True
+			dict["Is_person_detected"]=boolen
+			dict["detected_persons"] = no_of_persons
+
 	for i in range(no_of_persons):
-			dict[str("person "+str(i+1))] = confidences[i]
+		Dict={}
+		Dict["person_id"]=i+1
+		Dict["confidence"]=confidences[i]
+		details.append(Dict)
+
+	dict["persons_details"] =details
+
 	# apply non-maxima suppression to suppress weak, overlapping
 	# bounding boxes
 	idxs = cv2.dnn.NMSBoxes(boxes, confidences, in_confidence, in_threshold)

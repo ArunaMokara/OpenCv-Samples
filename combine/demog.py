@@ -16,21 +16,28 @@ def demographics(frame):
         faces, genders, ages, confidences = post_process(frame, outs, CONF_THRESHOLD, NMS_THRESHOLD)
         male_count = 0
         female_count = 0
+        details=[]
         no_of_faces = len(faces)
-        dict["Faces found"] = no_of_faces
-        dict["Demographics"] = {}
+        boolen = False
         for i in range(len(faces)):
-            dict["Demographics"][str("person "+str(i+1))] = {}
-            dict["Demographics"][str("person "+str(i+1))]["gender"] = genders[i]
-            if(genders[i]=="Male"):
-                male_count+=1
-            else:
-                female_count+=1
-            dict["Demographics"][str("person "+str(i+1))][" age_range"] = ages[i]
-            dict["Demographics"][str("person "+str(i+1))]["Confidence:"] = round(confidences[i], 2)
+           boolen=True
+           Dict={}
+           Dict["person_id"]=i+1
+           Dict["confidence"]=round(confidences[i],2)
+           Dict["gender"]=genders[i]
+           Dict["age_range"]=ages[i]
+           details.append(Dict)
+           if(genders[i]=="Male"):
+               male_count+=1
+           else:
+               female_count+=1
+        dict["Is_faces_detected"] = boolen
+        dict["Detected_Faces"] = no_of_faces
         dict["Males:"] = male_count
         dict["Females:"] = female_count
-
+        dict["Demographics"] = {}
+        dict["Demographics"]["persons_details"] = {}
+        dict["Demographics"]["persons_details"] = details
         info = [
                 ('number of faces detected', '{}'.format(len(faces)))
             ]

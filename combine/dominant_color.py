@@ -31,13 +31,6 @@ def color_dominant(x, y, w, h, frame):
             min_colours[(rd + gd + bd)] = name
         return min_colours[min(min_colours.keys())]
 
-    def get_colour_name(requested_colour):
-        try:
-            closest_name = actual_name = webcolors.rgb_to_name(requested_colour)
-        except ValueError:
-            closest_name = closest_colour(requested_colour)
-            actual_name = None
-        return actual_name, closest_name
 
     #image = cv2.imread("human.jpg")
     def plot_colors2(hist, centroids):
@@ -46,30 +39,38 @@ def color_dominant(x, y, w, h, frame):
         percent_list= []
         color_list = []
         value = []
-        Dict = {}
+        val = []
         for (percent, color) in zip(hist, centroids):
             #print("########################")
-            percent_list.append(percent)
+            percent_list.append(round(percent, 2))
             color_list.append(color)
             for i in color_list:
-                requested_colour = i
-                a = actual_name, closest_name = get_colour_name(requested_colour)
+                requested_colour = np.round(i, 1)
+                #print(requested_colour)
+                actual_name= closest_colour(requested_colour)
                 #print("Actual colour name:", actual_name, ", closest colour name:", closest_name)
-                value.append(a)
+                value.append(actual_name)
+                value = list(set(value))
             # plot the relative percentage of each cluster
             endX = startX + (percent * 300)
             cv2.rectangle(bar, (int(startX), 0), (int(endX), 50),
                           color.astype("uint8").tolist(), -1)
             startX = endX
 
-        for i in percent_list, value:
-            Dict = dict({"percentage":percent_list, "color": value})
-        #print(Dict)
+        for i,j in zip(value, percent_list):
+            dict = {}
+            dict["color"] = i
+            dict["percent"] = j
+            val.append(dict)
+            #val.append(j)
+                #print(type(val))
+        print(val)
         #print("percentages are: ", percent_list)
-        print("Maximum colour value: ", max(percent_list))
+        #print("colours are:", value)
+        #print("Maximum colour value: ", max(percent_list))
         #value.append(max(percent_list))
         #print("maximum percentage: ", value)
-        return bar, Dict
+        return bar, val
         # return the bar chart
 
     #for item in coordinates:
@@ -98,9 +99,8 @@ def color_dominant(x, y, w, h, frame):
     clt = KMeans(n_clusters=3) #cluster number
     clt.fit(img1)
     hist = find_histogram(clt)
-    bar, Dict = plot_colors2(hist, clt.cluster_centers_)
-    return  Dict
+    bar, val = plot_colors2(hist, clt.cluster_centers_)
+    return  val
     #plt.axis("off")
     #plt.imshow(bar)
     #plt.show()'''
-

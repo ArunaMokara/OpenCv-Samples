@@ -66,7 +66,7 @@ def detect_fire(frame):
             cv2.putText(frame, 'FIRE', (int(width / 16), int(height / 4)),
                         cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 5)
 
-            final['fire'] = 1
+            final['Is_fire_detected'] = True
 
     else:
             #cv2.rectangle(frame, (0, 0), (width, height), (0, 255, 0), 50)
@@ -74,7 +74,7 @@ def detect_fire(frame):
                         cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 5)
 	    
 
-            final['fire'] = 0
+            final['Is_fire_detected'] = False
 
     return final
 

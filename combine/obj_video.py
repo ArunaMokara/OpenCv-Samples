@@ -67,15 +67,5 @@ def color_detection(frame):
 			(w, h) = (boxes[i][2], boxes[i][3])
 			#print(x, y, w, h)
 			dict = color_dominant(x, y, w, h, frame)
-			'''if color_return is None:
-				continue
-			maximum = max(color_return)
-			color1=round(maximum, 3)
-			# draw a bounding box rectangle and label on the frame
-			color = [int(c) for c in COLORS[classIDs[i]]]
-			cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
-			text = "{}: {:.4f}: {}".format(LABELS[classIDs[i]],
-				confidences[i], color1)
-			cv2.putText(frame, text, (x, y - 5),cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)'''
 	return dict
 
