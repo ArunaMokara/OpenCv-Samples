@@ -11,6 +11,7 @@ from bson.objectid import ObjectId
 import requests, json
 from elasticsearch import Elasticsearch
 import datetime
+import time as t
 
 #Connecting to elasticsearch
 requests.get('http://localhost:9200')
@@ -78,6 +79,7 @@ def processing():
                 break
             time = cap.get(cv2.CAP_PROP_POS_MSEC)
             time = round(time / 1000, 2)
+            time = t.strftime('%H:%M:%S', t.gmtime(time))
             frame_no = cap.get(cv2.CAP_PROP_POS_FRAMES)
 
             #creating and storing each frame detections  in a dictionary
@@ -108,10 +110,10 @@ def processing():
             #inserting into elasticsearch
             elasticsearch.index(index=index, ignore=400, doc_type='doc', body=finaldict)
             print("index",index)
-            if(frame_no==5):
-                print("Done")
-                queue.pop(0)
-                break
+            # if(frame_no==5):
+            #     print("Done")
+            #     queue.pop(0)
+            #     break
 
         #updating processStatus of video as completed
         upload_collection.find_one_and_update(
